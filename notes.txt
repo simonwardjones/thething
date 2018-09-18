@@ -1,0 +1,23 @@
+
+
+make cognito
+awss cognito-identity create-identity-pool     --identity-pool-name DynamoPool  \
+ --allow-unauthenticated-identities     --output json >> cognito.txt
+
+make role
+awss iam create-role --role-name Cognito_DynamoPoolUnauth \
+--assume-role-policy-document file:///Users/simon.ward-jones/Documents/Personal/thething/myCognitoPolicy.json --output json > IAMRole.txt
+
+
+attach acces to rol
+awss iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess \
+--role-name Cognito_DynamoPoolUnauth 
+
+
+get role arn
+awss iam get-role --role-name Cognito_DynamoPoolUnauth --output json 
+
+add role to the pool
+awss cognito-identity set-identity-pool-roles \
+--identity-pool-id "us-east-1:f647de6c-db06-4c04-b1e9-eb6a53042703" \
+--roles unauthenticated=arn:aws:iam::044248571300:role/Cognito_DynamoPoolUnauth --output json

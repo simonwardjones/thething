@@ -1,0 +1,33 @@
+.card-body {
+  padding: 0.5em;
+}
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+.card-columns {
+  @include media-breakpoint-only(xs) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+  padding-top: 0.5em;
+}
+
+
+.card {
+  text-decoration: none;
+  color: #FF4136;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-color: black;
+  color: #2ECC40;
+}

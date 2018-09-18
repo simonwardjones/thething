@@ -1,0 +1,12 @@
+#logo {
+  border-radius: 5px;
+  border-style: double;
+  border-color: salmon;
+  height: 80px;
+  /*animation: App-logo-spin infinite 20s linear;*/
+}
+
+h1 {
+  font-size: 4.5em;
+  text-align: center;
+} 

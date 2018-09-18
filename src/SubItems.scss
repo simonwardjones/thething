@@ -1,0 +1,18 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+.sub_items {
+  @include media-breakpoint-only(xs) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 2;
+  }
+  padding-top: 0.5em;
+}

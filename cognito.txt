@@ -1,0 +1,5 @@
+{
+    "IdentityPoolId": "us-east-1:f647de6c-db06-4c04-b1e9-eb6a53042703",
+    "IdentityPoolName": "DynamoPool",
+    "AllowUnauthenticatedIdentities": true
+}
